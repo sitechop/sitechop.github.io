@@ -1,0 +1,31 @@
+.header {
+  background: white;
+  padding: 0.75em 0;
+  @extend %clear;
+}
+
+h1 {
+  float: left;
+  font-size: 1.8em;
+  a {
+    color: $headingtext;
+  }
+}
+
+.navigation {
+  float: right;
+  li {
+    display: inline;
+  }
+  li + li {
+    margin-left: 50px;
+
+  }
+  a {
+    line-height: 3.1;
+    color: $text;
+    &:hover {
+      color: $headingtext;
+    }
+  }
+}

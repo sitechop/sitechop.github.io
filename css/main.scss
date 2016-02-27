@@ -1,0 +1,13 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$headingtext: #333;
+$text: #5e5e5e;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "global",
+        "header",
+        "syntax-highlighting"
+;
