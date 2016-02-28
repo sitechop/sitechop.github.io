@@ -1,14 +1,26 @@
 .header {
   background: white;
-  padding: 0.75em 0;
   @extend %clear;
+  padding: 1.25em 0;
 }
 
 h1 {
   float: left;
-  font-size: 1.8em;
+  font-size: 1.65em;
+  line-height: 1;
   a {
     color: $headingtext;
+    position: relative;
+    padding-left: 40px;
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      @extend %logo-icon;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -18,14 +30,19 @@ h1 {
     display: inline;
   }
   li + li {
-    margin-left: 50px;
-
+    margin-left: 40px;
   }
   a {
-    line-height: 3.1;
+    font-size: 0.9em;
     color: $text;
     &:hover {
       color: $headingtext;
     }
+  }
+}
+
+@media (min-width: 38em){
+  .header {
+    padding: 1.5em 0;
   }
 }

@@ -1,0 +1,80 @@
+---
+layout: post
+title:  SSH Key Generation on Windows OSX and Ubuntu
+date:   2016-01-13 12:00:00 -0800
+permalink: /:categories/ssh-key-generation-windows-osx-ubuntu
+categories: posts
+image: /images/posts/ssh-keys/featured.jpg
+thumb: /images/posts/ssh-keys/featured-thumb.jpg
+class: general
+excerpt: Learn how to generate SSH keys on Windows, OSX and Ubuntu.
+---
+
+SSH Key Generation on Windows, OSX, and Ubuntu
+
+In this tutorial I'll go over generating SSH keys on three popular operating systems, Windows, Mac OSX, and Ubuntu (Linux). Since I'll be referencing SSH keys in many future posts, I should probably write a quick guide.
+
+### SSH Key generation on Ubuntu and Mac OSX
+
+Open up terminal and run the following command to generate a Private/Public SSH key.
+
+```nohighlight
+ssh-keygen
+```
+
+The prompt will ask you a few questions before generating the keys. If you want an extra layer of security you can add a passphrase to your key. This would require a "hacker" to need your private key and your passphrase in order to connect to whatever it is your connecting too.
+
+```nohighlight
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/robby/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/robby/.ssh/id_rsa.
+Your public key has been saved in /home/robby/.ssh/id_rsa.pub.
+The key fingerprint is:
+3e:0f:60:5e:25:33:a0:82:e3:65:60:14:91:87:d2:7d robby@HP-ENVY
+The key's randomart image is:
++--[ RSA 2048]----+
+| +=              |
+|oo .             |
+|ooo   .          |
+|.o.. E .         |
+|o...o + S        |
+|..o. + * .       |
+| .  .   +        |
+|         +       |
+|          .      |
++-----------------+
+```
+    
+This will save your public and private key in home/.ssh . The folder is hidden. To view it on Ubuntu you can press CTRL+H to display hidden folders.
+
+![ubuntu-ssh-folder](/images/posts/ssh-keys/hidden-folder-ubuntu.png)
+
+In Mac OSX you can run the following command through terminal to display hidden folders.
+
+```nohighlight
+defaults write com.apple.Finder AppleShowAllFiles YES
+```
+
+You'll need to relaunch Finder for the change to take effect. Do that by ALT+Right-clicking the icon and going to relaunch.
+
+![relaunch-osx-finder](/images/posts/ssh-keys/relaunch-finder.png)
+
+When you re-open finder your hidden folders will be displayed. They're grayed out though, to open a hidden folder just Right-click>Open.
+
+![relaunch-osx-finder](/images/posts/ssh-keys/hidden-folder-mac.png)
+
+### SSH Key generation on Windows with PuTTy
+
+Windows is a pain in the ass when it comes to ssh. To connect via ssh and to use SSH key pairs we will need third-party software. PuTTy is pretty good and simple to use. Download PuTTy and PuTTygen from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+
+Now open PuTTYgen, click Generate, and move your mouse over the blank area to generate ssh keys. Afterwords enter a key passphrase (if you want) and save your private key.
+
+![puttygen-generate](/images/posts/ssh-keys/puttygen.png)
+
+Since most servers are some form of linux, and use OpenSSH, we'll need the key provided in the top box. Copy and paste the key and save it in a file called id_rsa.pub.
+
+To connect to a server using this key pair you'll need to connect through PuTTy. Before connecting navigate to the SSH>Auth section and find your key.
+
+![puttygen-ssh-key](/images/posts/ssh-keys/putty.png)

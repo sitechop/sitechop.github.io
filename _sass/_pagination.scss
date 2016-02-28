@@ -1,0 +1,17 @@
+.pagination {
+  @extend %clear;
+  a {
+    background: white;
+    border-radius: 0.5em;
+    line-height: 42px;
+    padding: 0 1.25em;
+  }
+}
+
+.next {
+  float: right;
+}
+
+.previous {
+  float: left;
+}

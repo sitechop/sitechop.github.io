@@ -4,10 +4,26 @@
 
 $headingtext: #333;
 $text: #5e5e5e;
+$white: #fff;
+$blue: #26A5E8;
+$darkgrey: #364044;
+$grey: #555D61;
+$lightgrey: #f2f2f2;
+$rails: #DA2727;
+$shopify: #7ab55c;
+$ubuntu: #F38835;
+$windows: #5D45A7;
+$general: #BB4982;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "global",
-        "header",
-        "syntax-highlighting"
+  "global",
+  "header",
+  "hero",
+  "post-index",
+  "pagination",
+  "post-show",
+  "mailing-list",
+  "syntax-highlighting",
+  "icons"
 ;

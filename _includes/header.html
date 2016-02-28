@@ -2,7 +2,7 @@
   <div class="width-wrapper">
 
     <h1>
-      <a href="{{ site.baseurl }}">
+      <a href="{{ site.url }}">
         {{ site.title }}
       </a>
     </h1>
@@ -11,9 +11,11 @@
       {% for page in site.pages %}
         {% if page.title %}
           <li>
-            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
         {% endif %}
       {% endfor %}
+      <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Feed</a></li>
     </ul>
   </div>
 </div>

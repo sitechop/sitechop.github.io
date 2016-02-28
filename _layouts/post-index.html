@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+    {% include home-hero.html %}
+
+    <div class="main">
+      <div class="width-wrapper post-index">
+        {{ content }}
+      </div>
+      
+      <div class="width-wrapper pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% include footer-scripts.html %}
+  </body>
+
+</html>

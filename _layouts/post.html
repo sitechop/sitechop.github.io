@@ -1,15 +1,44 @@
 ---
-layout: default
+layout: post-single
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+<div class="hero post-hero">
+  <img src="{{ page.image }}" alt="">
+</div>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+<div class="main">
+  <div class="width-wrapper post-show">
+    
+  <div class="post-column">
+
+    <div class="post-header">
+      <h2>{{ page.title }}</h2>
+      <p class="post-meta">
+        Posted <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author }}</span></span>
+      </p>
+    </div>
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+
   </div>
 
-</article>
+  <div class="side-column">
+
+    <div class="sidebox">
+      <form id="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+        <h3>Join the Sitechop Mailing list</h3>
+        <p>Get new tutorials and updates delivered right to your inbox.</p>
+        <fieldset>
+          <input id="mailing-list-email" type="email" placeholder="Email Address" name="EMAIL">
+          <input type="submit" name="subscribe" id="mailing-list-submit">
+        </fieldset>
+        <p id="mailing-list-response"></p>
+      </form>
+
+
+    </div>
+
+  </div>
+</div>

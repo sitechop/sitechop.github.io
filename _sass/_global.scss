@@ -6,11 +6,12 @@
 
 body {
   font-size: 100%;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-family: "Gotham SSm A", "Gotham SSm B", helvetica, arial, sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.65;
   background: #f6f6f6;
   color: $text;
+  overflow-x: hidden;
 }
 
 h2, h3, h4, h5, h6 {
@@ -22,10 +23,22 @@ a {
   text-decoration: none;
 }
 
+fieldset {
+  border: none;
+}
+
+.main {
+  background: #f6f6f6;
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+}
+
 .width-wrapper {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 25px;
+  max-width: 80em;
+  padding: 0 1.25em;
+  @extend %clear;
 }
 
 %clear {

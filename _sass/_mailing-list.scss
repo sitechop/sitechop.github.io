@@ -1,0 +1,52 @@
+#mailing-list {
+  background: url('/images/pattern.jpg');
+  background-size: 400px;
+  border-radius: 0.5em;
+  padding: 45px 30px;
+  text-align: center;
+  @media (min-width: 55em){
+    text-align: left;
+  }
+  h3 {
+    color: white;
+    font-size: 1.25em;
+  }
+  p {
+    color: #ccc;
+    font-weight: 400;
+    margin-top: 0.5em;
+  }
+  fieldset {
+    max-width: 360px;
+    position: relative;
+    margin: 1.25em auto 0 auto;
+    display: block;
+  }
+  input[type=email], input[type=submit] {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    outline: none;
+  }
+  input[type=email] {
+    line-height: 43px;
+    width: 100%;
+    padding: 0 6.75em 0 1em;
+    color: #5e5e5e;
+  }
+  input[type=submit] {
+    position: absolute;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5.75em;
+    background: $blue;
+    color: $white;
+    font-weight: 600;
+  }
+}
