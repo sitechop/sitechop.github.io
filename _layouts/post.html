@@ -2,8 +2,7 @@
 layout: post-single
 ---
 
-<div class="hero post-hero">
-  <img src="{{ page.image }}" alt="">
+<div class="hero post" style="background-image: url('{{ page.image }}');">
 </div>
 
 <div class="main">
@@ -27,14 +26,16 @@ layout: post-single
   <div class="side-column">
 
     <div class="sidebox">
-      <form id="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+      <form class="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
         <h3>Join the Sitechop Mailing list</h3>
         <p>Get new tutorials and updates delivered right to your inbox.</p>
         <fieldset>
-          <input id="mailing-list-email" type="email" placeholder="Email Address" name="EMAIL">
-          <input type="submit" name="subscribe" id="mailing-list-submit">
+          <input type="email" placeholder="Email Address" name="EMAIL">
+          <button type="submit">
+            {% include arrow.html %}
+          </button>
         </fieldset>
-        <p id="mailing-list-response"></p>
+        <p class="response"></p>
       </form>
 
 

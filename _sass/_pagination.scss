@@ -1,10 +1,16 @@
 .pagination {
   @extend %clear;
+  margin-bottom: 40px;
   a {
     background: white;
     border-radius: 0.5em;
     line-height: 42px;
     padding: 0 1.25em;
+    color: $blue;
+    &:hover {
+      background: $blue;
+      color: white;
+    }
   }
 }
 

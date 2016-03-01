@@ -1,38 +1,52 @@
-<footer class="site-footer">
+<hr>
 
-  <div class="wrapper">
+<div class="footer">
+  <div class="width-wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div class="footer-top">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <div class="footer-box mailing-list-box">
+        <h2>Mailinglist</h2>
+        <form class="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <fieldset>
+            <input class="email" type="email" placeholder="Email Address" name="EMAIL">
+            <button type="submit">
+              {% include arrow.html %}
+            </button>
+          </fieldset>
+          <p class="response"></p>
+        </form>
+      </div>
+
+      <div class="footer-box">
+        <h2>Navigate</h2>
+        <ul>
+          <li><a href="{{ site.baseurl }}">Home</a></li>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li>
+                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Feed</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+      <div class="footer-box">
+        <h2>Social</h2>
+        <ul class="footer-social">
+          <li><a class="github-icon" href="https://github.com/robbyklein">GitHub</a></li>
+          <li><a class="twitter-icon" href="https://twitter.com/itsrobbyk">Twitter</a></li>
+          <li><a class="codepen-icon" href="https://twitter.com/itsrobbyk">Codepen</a></li>
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
     </div>
 
+    <div class="footer-bottom">
+      <p class="copy">&copy; Sitechop 2014-2016</p>
+    </div>
   </div>
-
-</footer>
+</div>

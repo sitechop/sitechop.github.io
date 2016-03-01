@@ -1,11 +1,12 @@
 .post-index {
+  padding-top: 40px;
 }
 
 .post-card {
-  margin: 0 auto;
-  max-width: 33em;
+  margin: 0 auto 0px auto;
+  max-width: 28em;
   width: 100%;
-  display: inline-block;
+  display: block;
   h2 {
     color: #333;
     margin-bottom: 20px;
@@ -108,7 +109,7 @@
   }
 
   .post-card {
-    margin: 0;
+    margin: 0 0 40px;
     -webkit-box-flex: 1 0 50%;
     -moz-box-flex: 1 0 50%;
     -webkit-flex: 1 0 50%;

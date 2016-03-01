@@ -1,4 +1,80 @@
-#mailing-list {
+.mailing-list {
+  fieldset {
+    position: relative;
+    display: block;
+  }
+  input[type=email], button {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 14px;
+    outline: none;
+  }
+  input[type=email] {
+    line-height: 40px;
+    width: 100%;
+    padding: 0 6.75em 0 1em;
+    color: #333;
+    &::-webkit-input-placeholder {
+        color:    #A6A9AA;
+    }
+    &::-moz-placeholder {
+       color:    #A6A9AA;
+       opacity:  1;
+    }
+    &:-ms-input-placeholder {
+       color:    #A6A9AA;
+    }
+    &:placeholder-shown {
+      color:    #A6A9AA;
+    }
+  }
+  button {
+    position: absolute;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    padding-top: 1px;
+    transition: 0.2s background;
+    &:hover {
+      cursor: pointer;
+    }
+    svg {
+      width: 16px;
+      margin-top: 3px;
+      transition: 0.2s fill;
+    }
+  }
+  .response {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+.footer .mailing-list {
+  input[type=email] {
+    border: 1px solid #ccc;
+  }
+  button {
+    border-left: 1px solid #ccc;
+    &:hover {
+      cursor: pointer;
+      background: $blue;
+      border-left-color: white;
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+.side-column .mailing-list {
   background: url('/images/pattern.jpg');
   background-size: 400px;
   border-radius: 0.5em;
@@ -6,6 +82,10 @@
   text-align: center;
   @media (min-width: 55em){
     text-align: left;
+  }
+  fieldset {
+    max-width: 360px;
+    margin: 1.25em auto 0 auto;
   }
   h3 {
     color: white;
@@ -16,37 +96,25 @@
     font-weight: 400;
     margin-top: 0.5em;
   }
-  fieldset {
-    max-width: 360px;
-    position: relative;
-    margin: 1.25em auto 0 auto;
-    display: block;
-  }
-  input[type=email], input[type=submit] {
-    display: block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: none;
-    border-radius: 0.5em;
-    font-size: 1em;
-    outline: none;
+  a {
+    color: white;
   }
   input[type=email] {
-    line-height: 43px;
-    width: 100%;
-    padding: 0 6.75em 0 1em;
-    color: #5e5e5e;
+    background-color: #252C2F;
   }
-  input[type=submit] {
-    position: absolute;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 5.75em;
-    background: $blue;
-    color: $white;
-    font-weight: 600;
+  button {
+    background-color: rgba(0,0,0,.2);
+    &:hover {
+      background: $blue;
+    }
+    svg {
+      fill: white;
+    }
+  }
+}
+
+@media (min-width: 55em){
+  .side-column .mailing-list {
+    text-align: left;
   }
 }
