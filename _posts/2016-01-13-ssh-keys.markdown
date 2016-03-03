@@ -8,6 +8,7 @@ image: /images/posts/ssh-keys/featured.jpg
 thumb: /images/posts/ssh-keys/featured-thumb.jpg
 class: general
 excerpt: Learn how to generate SSH keys on Windows, OSX and Ubuntu.
+post_id: 4
 ---
 
 SSH Key Generation on Windows, OSX, and Ubuntu

@@ -8,6 +8,7 @@ image: /images/posts/installing-git/featured.jpg
 thumb: /images/posts/installing-git/featured-thumb.jpg
 class: ubuntu
 excerpt: Learn how to install the latest version of git from source on Ubuntu 14.04.
+post_id: 3
 ---
 
 Installing Git and Creating a Repo on Ubuntu

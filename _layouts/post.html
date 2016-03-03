@@ -5,40 +5,42 @@ layout: post-single
 <div class="hero post" style="background-image: url('{{ page.image }}');">
 </div>
 
-<div class="main">
-  <div class="width-wrapper post-show">
+<div class="main post-show">
+  <div class="width-wrapper">
     
-  <div class="post-column">
+    <div class="post-column">
+      <div class="post-header">
+        <h2>{{ page.title }}</h2>
+        <p class="post-meta">Posted <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author }}</span></span></p>
+      </div>
 
-    <div class="post-header">
-      <h2>{{ page.title }}</h2>
-      <p class="post-meta">
-        Posted <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author }}</span></span>
-      </p>
+      <div class="post-body">
+        {{ content }}
+      </div>
+
+      <div class="comments" id="disqus_thread"></div>
+
+      <noscript>
+        <p>Please enable JavaScript to view the comments.</p>
+      </noscript>
+
+
     </div>
 
-    <div class="post-body">
-      {{ content }}
-    </div>
+    <div class="side-column">
+      <div class="sidebox">
+        
+        <form class="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <h3>Join the Sitechop Mailing list</h3>
+          <p>Get new tutorials and updates delivered right to your inbox.</p>
+          <fieldset>
+            <input type="email" placeholder="Email Address" name="EMAIL">
+            <button type="submit">{% include arrow.html %}</button>
+          </fieldset>
+          <p class="response"></p>
+        </form>
 
-  </div>
-
-  <div class="side-column">
-
-    <div class="sidebox">
-      <form class="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-        <h3>Join the Sitechop Mailing list</h3>
-        <p>Get new tutorials and updates delivered right to your inbox.</p>
-        <fieldset>
-          <input type="email" placeholder="Email Address" name="EMAIL">
-          <button type="submit">
-            {% include arrow.html %}
-          </button>
-        </fieldset>
-        <p class="response"></p>
-      </form>
-
-
+      </div>
     </div>
 
   </div>

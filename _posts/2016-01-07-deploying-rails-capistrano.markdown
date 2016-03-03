@@ -8,6 +8,7 @@ image: /images/posts/deploying-capistrano/featured.jpg
 thumb:  /images/posts/deploying-capistrano/featured-thumb.jpg
 class: rails
 excerpt: Learn to install, configure, and deploy a Rails application using Capistrano.
+post_id: 2
 ---
 
 Once you have a Ruby on Rails production sever set up, its time to look at deployment options. The most well known has got to be Capistrano, which allows you to deploy changes by running simple commands. It can be confusing to set up, so here's a guide taking you through the deployment process.

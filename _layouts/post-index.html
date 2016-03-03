@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
     {% include header.html %}
     {% include home-hero.html %}
-
-    <div class="main">
-      <div class="width-wrapper post-index">
+    <div class="main post-index">
+      
+      <div class="width-wrapper">
         {{ content }}
       </div>
       
@@ -23,13 +20,9 @@
             <a href="{{ paginator.next_page_path }}" class="next">Next</a>
           {% endif %}
         </div>
-    {% endif %}
-  </div>
-
-
+      {% endif %}
+    </div>
     {% include footer.html %}
-
     {% include footer-scripts.html %}
   </body>
-
 </html>

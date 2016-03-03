@@ -8,6 +8,7 @@ image: /images/posts/migrating-ubuntu/featured.jpg
 thumb:  /images/posts/migrating-ubuntu/featured-thumb.jpg
 class: ubuntu
 excerpt: Helpful softwares and thoughts for designers and developers migrating Ubuntu.
+post_id: 5
 ---
 
 Once you have a Ruby on Rails production sever set up, its time to look at deployment options. The most well known has got to be Capistrano, which allows you to deploy changes by running simple commands. It can be confusing to set up, so here's a guide taking you through the deployment process.

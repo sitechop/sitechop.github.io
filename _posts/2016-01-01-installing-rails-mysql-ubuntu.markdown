@@ -8,6 +8,7 @@ image: /images/posts/installing-rails/featured.jpg
 thumb: /images/posts/installing-rails/featured-thumb.jpg
 class: ubuntu
 excerpt: Learn how to get Ruby on Rails and MySql installed and running on an Ubuntu machine.
+post_id: 1
 ---
 
 One reason I like Ubuntu, coming from windows, is that it is so much easier setting up a local environment to develop on. It was a breath of fresh air avoiding the extra windows-specific steps to make simple things work. Ruby on Rails is a popular choice to develop web applications and this guide will take you through the installation process on an Ubuntu server or desktop.

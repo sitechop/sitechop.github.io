@@ -8,6 +8,7 @@ image: /images/posts/installing-image-magick/featured.jpg
 thumb:  /images/posts/installing-image-magick/featured-thumb.jpg
 class: ubuntu
 excerpt: Learn how to install Image Magick 6.9.0 on Ubuntu 14.04.
+post_id: 6
 ---
 
 Image Magick is an image editing suite that allows you to edit and manipulate all kinds of images from the command line. This can be extremely handy for applications that allow image uploads. I had a hard time finding current install instructions online and ran into several problems along the way. Today I’m going to take you through the Image Magick 6.9.0 installation process on an Ubuntu 14.04 box.
