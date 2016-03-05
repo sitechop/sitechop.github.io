@@ -5,16 +5,16 @@ layout: post-single
 <div class="hero post" style="background-image: url('{{ page.image }}');">
 </div>
 
-<div class="main post-show">
+<div class="main post-show" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="width-wrapper">
     
     <div class="post-column">
       <div class="post-header">
-        <h2>{{ page.title }}</h2>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+        <h2 itemprop="name headline">{{ page.title }}</h2>
+        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
       </div>
 
-      <div class="post-body">
+      <div class="post-body" itemprop="articleBody">
         {{ content }}
       </div>
 
