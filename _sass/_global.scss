@@ -307,6 +307,9 @@ h1 {
   p {
     font-size: 18px;
   }
+  img {
+    max-width: 100%;
+  }
   a {
     color: $blue;
     font-weight: 500;
