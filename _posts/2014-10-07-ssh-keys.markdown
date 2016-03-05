@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  SSH Key Generation on Windows OSX and Ubuntu
-date:   2016-01-09 12:00:00 -0800
+date:   2014-10-07 12:00:00 -0800
+updated: 2016-03-05 12:00:00 -0800
 permalink: /:categories/ssh-key-generation-windows-osx-ubuntu
 categories: posts
 image: /images/posts/ssh-keys/featured.jpg

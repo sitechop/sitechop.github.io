@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploying Rails applications with Capistrano"
-date:   2016-01-16 12:00:00 -0800
+date:   2014-12-01 12:00:00 -0800
 permalink: /:categories/deploying-rails-capistrano
 categories: posts
 image: /images/posts/deploying-capistrano/featured.jpg

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Installing Ruby on Rails and MySQL on Ubuntu
-date:   2016-01-01 12:00:00 -0800
+date:   2014-09-30 12:00:00 -0800
+updated:   2016-02-21 12:00:00 -0800
 permalink: /:categories/installing-rails-mysql-ubuntu
 categories: posts
 image: /images/posts/installing-rails/featured.jpg

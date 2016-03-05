@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Installing Git From Source
-date:   2016-01-06 12:00:00 -0800
+date: 2014-10-01 12:00:00 -0800
+updated: 2016-02-13 12:00:00 -0800
 permalink: /:categories/installing-git-source-ubuntu
 categories: posts
 image: /images/posts/installing-git/featured.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing Image Magick 6.9.0 on Ubuntu 14.04"
-date:   2016-01-30 12:00:00 -0800
+date:   2015-01-30 12:00:00 -0800
 permalink: /:categories/installing-image-magick-ubuntu
 categories: posts
 image: /images/posts/installing-image-magick/featured.jpg

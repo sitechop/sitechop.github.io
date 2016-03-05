@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Installing Nginx and Passenger on Ubuntu"
-date:   2016-01-14 12:00:00 -0800
+date: 2014-11-01 12:00:00 -0800
+updated: 2016-02-24 12:00:00 -0800
 permalink: /:categories/installing-nginx-passenger-ubuntu
 categories: posts
 image: /images/posts/nginx-passenger/featured.jpg
