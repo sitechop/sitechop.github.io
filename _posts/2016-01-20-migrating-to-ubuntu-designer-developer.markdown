@@ -8,174 +8,243 @@ image: /images/posts/migrating-ubuntu/featured.jpg
 thumb:  /images/posts/migrating-ubuntu/featured-thumb.jpg
 class: ubuntu
 excerpt: Helpful softwares and thoughts for designers and developers migrating Ubuntu.
-post_id: 5
 ---
 
-Once you have a Ruby on Rails production sever set up, its time to look at deployment options. The most well known has got to be Capistrano, which allows you to deploy changes by running simple commands. It can be confusing to set up, so here's a guide taking you through the deployment process.
+Migrating to Ubuntu as a Web Designer and Developer
 
-### Briefing
+Originally a Windows and OSX user, I made the jump to Ubuntu Linux early this year. After a brief adjustment period, I must say I've grown to love it. The stability and UNIXiness (yeah, made that word up) of OSX and the flexibility of Windows make for the perfect combination of awesomeness. Today I want to do two things. Tell you why I made the migration to Ubuntu Linux as a web designer/developer, and give you a overview of all the different softwares I use on a daily basis.
 
-You are going to need a Rails production sever and a git repository of your project, in order to deploy with Capistrano. Additionally you will want a special Deploy user with limited permissions for Capistrano to use. I wrote a few guides to take you through everything.
+### Why I Like Ubuntu Better
 
-#### Here's my h4
+It took me a little while to start loving Ubuntu, but now I can never switch back, there are many benefits over my old windows environment. Here's some of them:
 
-To set up a production sever you can follow my two guides [Installing Ruby on Rails and MySQL on Ubuntu](/ubuntu/installing-rails-mysql-ubuntu), and [Installing Passenger and Nginx on Ubuntu](/ubuntu/installing-passenger-nginx-ubuntu).
+#### The interface
 
-##### and an h5 of course.
+The interface is great. It's like a mix between mac and windows. The “start/launch menu” on left was a little weird at first but you get used to it.
 
-As for the Git repository, you can simply use GitHub, or if you want I wrote a tutorial [Installing git and setting up a private repository](/ubuntu/installing-git-ubuntu-creating-repository).
+[![Ubuntu desktop interface](/images/posts/migrating-ubuntu/interface.png)](/images/posts/migrating-ubuntu/interface-large.png)
 
-Now let's take a look at what we'll be doing throughout this guide.
+#### Font rendering
 
-1. We'll install Capistrano locally in our app.
-2. We'll configure Capistrano for our server and repository.
-3. We'll deploy our application using Capistrano.
-4. We'll create a database and fix any problems we run into.
+I know this shouldn't matter to much, but fonts render great on Ubuntu. No more of that choppy ugly windows cleartype rendering. I'd go as far to say it renders them nicer than Mac OSX.
 
-### Installing Capistrano on our app
+#### Web Development Tools
 
-This parts super easy, it's just a couple gems! Start by navigating to the root on your Ruby on Rails application locally. Open the Gemfile, and add the Capistrano gems.
+Everything I use to develop websites is built to run well Linux severs,  so in turn they run great on Ubuntu desktop. Everything is much more simpler to get going when compared with Windows.
 
+#### Terminal
 
-{% highlight ruby %}
-gem 'capistrano', '~> 3.1.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-{% endhighlight %}
+This one only applies to people coming from windows but shell scripting is so much nicer than batch scripting.
 
-Save, exit, and run the following commands in Terminal.
+#### Open SSH
 
-```nohighlight
-bundle install
-cap install STAGES=production
-```
+One of the most annoying things on windows is SSH. Open SSH sure as hell beats PuTTY or whatever I was using on windows.
 
-This will install the Capistrano Gems and create all the Capistrano configurations files within our app. Easy enough, right?
+#### Automatic Updates
 
-### Capistrano Configuration
+It's nice having Ubuntu update all my third party software for me. No more updating everything individually, as I did on Windows.
 
-From the root of your application, open the Capfile. We need to add a couple lines, make yours look like the example below.
+[![Ubuntu updator](/images/posts/migrating-ubuntu/updater.png)](/images/posts/migrating-ubuntu/updater-large.png)
 
-{% highlight ruby %}
-require 'capistrano/setup'
-require 'capistrano/deploy'
-require 'capistrano/bundler'
-require 'capistrano/rails'
-Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
-{% endhighlight %}
+#### Directory Structure
 
-Now open config/deploy.rb, replace the contents with the code below, be sure to change the application name, repository url, and deploy root.
+Very similar to Mac OSX, the filing system and directory structure is a lot better than windows systems. They say you don't have to worry about defraging your hard drive as well.
 
-{% highlight ruby %}
-lock '3.1.0'
+### Should you make the jump to Ubuntu?
 
-set :application, 'yourapp'
-set :repo_url, 'git@yourserver.com:/var/git/yourproject.git'
+Before we go any further, I should probably tell you a couple of things. **Certain things aren't as simple on Ubuntu.**
 
-set :deploy_to, '/var/www/yoursite.com'
+Ubuntu is not as user friendly as Windows/OSX. Not everything has a graphical user interface. If you plan to switch, **you'll need to get comfortable using the command line.** Ubuntu is pretty good about supporting hardware, but chances are you'll have to search for solutions to random hardware issues as well. Thankfully there's a great support community out there, and it shouldn't be too hard to get set up.
 
-set :linked_files, %w{config/database.yml config/secrets.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+If your primarily a designer I wouldn't recommend making the jump to Ubuntu. Adobe products do not have support for Linux operating systems, it would just make things more of a hassle. Ubuntu/Linux users are forced to either virtualize a windows system or run software through Wine (which offers minimal support).
 
-namespace :deploy do
+#### Mac/OSX Users
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
+Whether a designer and/or developer, If you're currently running Mac OSX, I'd opt out of switching to Ubuntu. This post is really geared toward Windows users who can't always afford pricey apple products. OSX is very similar to debian-based systems and offers a lot of the same tools, along with the user-friendliness side of Windows systems.
 
-  after :publishing, 'deploy:restart'
-  after :finishing, 'deploy:cleanup'
-end
-{% endhighlight %}
+#### Windows Users
 
-Last but not least open config/deploy/production.rb and edit it to look like the example below. Be sure to replace the sever IP with your own.
+For windows users I would definitely say yes. Let's be honest if your a web developer, windows makes everything way harder to run smoothly. I can't even quantify the time I've spent trying to fix windows-specific problems.
 
-{% highlight ruby %}
-set :stage, :production
-server '543.543.345.543', user: 'deploy', roles: %w{web app}
-{% endhighlight %}
+### Software and Technologies I Use
 
-That's about it, we're all configured and ready to give deployment with Capistrano a try.
+Most of the general software I use on a daily basis is available on Ubuntu. This includes things like chat clients, email clients, browsers, FTP clients, etc. If it's not, better believe there's another great alternative available.
 
-### Deploying with Capistrano
+**Adobe products do not support Ubuntu.** Graphic design software is the only thing tying me to Windows/OSX. Since I'm only designing a fraction of the time, I've found virtualization to be a great solution.  I run a virtualized instance of windows XP (which is the minimum for Adobe CS6), and found my system can handle it perfectly.
 
-Now that we're all configured and ready to go, cross your fingers and run the following command to test the configuration and connection.
+Web development is awesome on Ubuntu. Since the majority of web servers out their run Linux, most technologies are built to work great on them. Installing things like programming languages, web servers, and databases is so much easier, and they all run together great. No more of that mamp/xampp stuff.
+
+![web development ubuntu software](/images/posts/migrating-ubuntu/webdevelopment.png)
+
+#### Apache Web Server
+
+Django and Rails comes with a server to develop on, but for Wordpress I needed to set one up. To do this I simply installed apache web sever through apt-get. On production severs I run nginx, but apache is much easier to configure so why not use it for local development.
 
 ```nohighlight
-cap production deploy:check
+sudo apt-get install apache2
 ```
 
-**Error:** Finished in 0.055 seconds with exit status 1 (failed). ERRORlinked file /var/www/yoursite.com/shared/config/database.yml does not exist on 543.543.345.543 cap aborted!
+#### MySQL Database
 
-Oh no, what happened here? It looks like we forgot to create the database.yml and secrets.yml files that we linked while editing deploy.rb. Lets do that now.
+Most web applications need some sort of database. I always use MySQL, since I'm familar with it the most. This can also easily be installed though apt-get.
 
 ```nohighlight
-ssh deploy@yoursite.com
-cd /var/www/yoursite.com/shared/config
-nano database.yml
+sudo apt-get install mysql-server php5-mysql
+sudo mysql_install_db
+sudo mysql_secure_installation
 ```
 
-Paste your database.yml file here. You can edit out all the development bits. Be sure to set the user and password for your sever MySQL account
+#### Python
 
-{% highlight yaml %}
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+Python comes pre-installed on Ubuntu, so if you like to use Django to create web apps you don't have to worry about this.
 
-production:
-  <<: *default
-  database: robbyk_production
-  username: youruser
-  password: yourpassword
-{% endhighlight %}
+#### PIP Package Manager
 
-Save and exit. Now let's create one for our secrets.yml file.
+Similar to rubygems, PIP is used to install python “addons”. To install PIP simply download the python file from https://bootstrap.pypa.io/get-pip.py and run the command below:
 
 ```nohighlight
-nano secrets.yml
+python get-pip.py
 ```
 
-Paste the following code, replacing with your own secret key base
+#### Virtualenv
 
-{% highlight yaml %}
-production:
-  secret_key_base: a1dfa1e1b36393d2342a3fa6eac8ed82b4443234f543c75bb8facd25a518e72d02293f6ad1f324e927e3337d7a048d6aaa2f7ac8b139c0c3064793b1832bf5
-{% endhighlight %}
-
-**Note:** If you don't have a secret key base already, you can generate one by navigating to the root of your application locally and running **rake secret**
-
-Alright now that the files are in place, let's try this again.
+This softwares good if you want to keep your django/python applications isolated from globally installed packages. You can install it through PIP.
 
 ```nohighlight
-cap production deploy:check
+sudo pip install virtualenv
 ```
 
-**Success:** cap production deploy:check Finished in 0.048 seconds with exit status 0 (successful).
+#### Ruby
 
-Awesome looks like everything is configured correctly and working. Now let's deploy our application for real. Run the following command.
+I use rails (which runs on ruby) quite frequently, so I installed Ruby from source as the apt-get version is way out of date. I wrote a tutorial on this, you can view it [here](/posts/installing-rails-mysql-ubuntu).
+
+#### Rails
+
+Rails runs on top the Ruby language which you'll have to install yourself. You can install an outdated version using apt-get or install it from source, like I've done. If you work on multiple versions of ruby, ruby version manager run great on Ubuntu.
 
 ```nohighlight
-cap production deploy
+gem install rails
 ```
 
-**Success:** Finished in 0.057 seconds with exit status 0 (successful).
+#### NodeJS
 
-It looks like we've deployed successfully, but when we open our website in the browser, we see an error message. After checking our production log at `/var/www/yoursite.com/current/log/production.log` we discover that we haven't created/migrated a database yet. Do this by running the following commands.
+I only install this for the Javascript Runtime, if you plan on developing web applications using it, I recommend installing it from source. For my needs I simply ran:
 
 ```nohighlight
-ssh user@yoursever.com
-sudo -i # Gain root
-cd /var/www/yoursite.com/current
-bundle exec rake db:create RAILS_ENV=production
-bundle exec rake db:migrate RAILS_ENV=production
-service nginx restart
+sudo apt-get install nodejs
 ```
 
-Refresh your website in your web browser and you should be in business! Any problems, questions, or feedback just leave a comment below.
+#### PHP
+
+I use Wordpress every now and then which requires the PHP language. PHP can easily be installed using apt-get.
+
+```nohighlight
+sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+```
+
+#### PHPmyadmin
+
+This is a great tool for managing MySQL databases. You can install it by running the code below.
+
+```
+sudo apt-get install phpmyadmin
+sudo php5enmod mcrypt
+```
+
+If you don't have PHP installed on your system there are other alternatives, just do some research.
+
+#### Git Version Control
+
+I'm growing to love git more and more. I'm even starting to use it for deployment more and more as time goes by. The apt-get version is super old on this one too, I recommend installing it from source. You can read my guide [here](/posts/installing-git-source-ubuntu).
+
+![general ubuntu software](/images/posts/migrating-ubuntu/general.png)
+
+#### Sublime Text (text editor)
+
+My text editor of choice, thankfully it's available on all sorts of platforms. You can install sublime text 3 by running the following commands:
+
+```nohighlight
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+```
+
+#### Firezilla (FTP client)
+
+I'm rarely found using an FTP client these days, but its nice to have one for those times I am. I installed this one using the Ubuntu Software Center which comes preinstalled on your system.
+
+#### Virtual Box (system virtualization)
+
+This ones very important. I run a virtual installation of Windows XP. Though XP I run Adobe Photoshop/Illustrator CS6 for design, along with numerous old browsers for website testing.
+
+```nohighlight
+sudo apt-get install virtualbox
+```
+
+#### Firefox (web browser)
+
+Not my browser of choice, but comes in handy for testing websites. This comes preinstalled on Ubuntu.
+
+#### Chrome (web browser)
+
+Chrome is the browser I use all the time. To install this I just downloaded the installer from the chrome website and ran it.
+
+#### Opera (web browser)
+
+Another web browser installed souly for website testing purposes. I just downloaded the installer from the website on this one too.
+
+#### Skype (chat client)
+
+I use skype all the time to communicate with people. The Linux version is no-where near as good as the windows/osx one, but its getting better and better. I wouldn't use the Ubuntu Software Center for this, I ran into numerous problems that way.
+
+```nohighlight
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo apt-get update 
+sudo apt-get install skype
+```
+
+#### Pidgen Instant Messenger
+
+I sometimes use instant messengers other than skype. Many are unavailable for Ubuntu (and Linux in general). I found Pidgen to be a great client.
+
+```nohighlight
+sudo add-apt-repository -y ppa:pidgin-developers/ppa
+sudo apt-get update
+sudo apt-get install pidgin
+```
+
+#### VideoLAN (VLC) (media player)
+
+A great media player I've always used on windows/osx. This will play just about anything:
+
+```nohighlight
+sudo add-apt-repository ppa:videolan/stable-daily
+sudo apt-get update
+sudo apt-get install vlc
+```
+
+#### Keepass2 (password managment)
+
+Here's a great password manager. It's windows software but has been ported to every OS imaginable. Install it on Ubuntu by running the command below.
+
+```nohighlight
+sudo apt-add-repository ppa:jtaylor/keepass
+sudo apt-get update
+sudo apt-get install keepass2
+```
+
+#### Transmission (BitTorrent client)
+
+Transmissions is a great bittorrent client that is available on Mac OSX and linux systems. It comes pre-installed on Ubuntu and I use it all the time.
+
+#### Thunderbird
+
+To be honest I usually just go to gmail.com, but thunderbird comes preinstalled on Ubuntu. It's a nice email client if you need one.
+
+#### Libre Office
+
+Libre office is created by Mozilla, its a great alternative to Microsoft Office, which isn't available on Ubuntu/linux. It comes preinstalled on Ubuntu.
+
+### Updates
+
+**November 13, 2014:** Added Pidgen Instant Messenger to software and technologies

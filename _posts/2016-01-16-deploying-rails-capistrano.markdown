@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  "Deploying Rails applications with Capistrano"
-date:   2016-01-07 12:00:00 -0800
+date:   2016-01-16 12:00:00 -0800
 permalink: /:categories/deploying-rails-capistrano
 categories: posts
 image: /images/posts/deploying-capistrano/featured.jpg
 thumb:  /images/posts/deploying-capistrano/featured-thumb.jpg
 class: rails
 excerpt: Learn to install, configure, and deploy a Rails application using Capistrano.
-post_id: 2
 ---
 
 Once you have a Ruby on Rails production sever set up, its time to look at deployment options. The most well known has got to be Capistrano, which allows you to deploy changes by running simple commands. It can be confusing to set up, so here's a guide taking you through the deployment process.
@@ -17,13 +16,9 @@ Once you have a Ruby on Rails production sever set up, its time to look at deplo
 
 You are going to need a Rails production sever and a git repository of your project, in order to deploy with Capistrano. Additionally you will want a special Deploy user with limited permissions for Capistrano to use. I wrote a few guides to take you through everything.
 
-#### Here's my h4
+To set up a production sever you can follow my two guides [Installing Ruby on Rails and MySQL on Ubuntu](/posts/installing-rails-mysql-ubuntu), and [Installing Passenger and Nginx on Ubuntu](/posts/installing-nginx-passenger-ubuntu).
 
-To set up a production sever you can follow my two guides [Installing Ruby on Rails and MySQL on Ubuntu](/ubuntu/installing-rails-mysql-ubuntu), and [Installing Passenger and Nginx on Ubuntu](/ubuntu/installing-passenger-nginx-ubuntu).
-
-##### and an h5 of course.
-
-As for the Git repository, you can simply use GitHub, or if you want I wrote a tutorial [Installing git and setting up a private repository](/ubuntu/installing-git-ubuntu-creating-repository).
+As for the Git repository, you can simply use GitHub, or if you want I wrote a tutorial [Installing git from source](/posts/installing-git-source-ubuntu).
 
 Now let's take a look at what we'll be doing throughout this guide.
 
@@ -108,7 +103,10 @@ Now that we're all configured and ready to go, cross your fingers and run the fo
 cap production deploy:check
 ```
 
-**Error:** Finished in 0.055 seconds with exit status 1 (failed). ERRORlinked file /var/www/yoursite.com/shared/config/database.yml does not exist on 543.543.345.543 cap aborted!
+```nohighlight
+Error: Finished in 0.055 seconds with exit status 1 (failed). 
+ERRORlinked file /var/www/yoursite.com/shared/config/database.yml does not exist on 543.543.345.543 cap aborted!
+```
 
 Oh no, what happened here? It looks like we forgot to create the database.yml and secrets.yml files that we linked while editing deploy.rb. Lets do that now.
 

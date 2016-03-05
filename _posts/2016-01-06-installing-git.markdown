@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  Installing Git From Source
-date:   2016-01-13 12:00:00 -0800
+date:   2016-01-06 12:00:00 -0800
 permalink: /:categories/installing-git-source-ubuntu
 categories: posts
 image: /images/posts/installing-git/featured.jpg
 thumb: /images/posts/installing-git/featured-thumb.jpg
 class: ubuntu
 excerpt: Learn how to install the latest version of git from source on Ubuntu 14.04.
-post_id: 3
 ---
 
 Installing Git and Creating a Repo on Ubuntu

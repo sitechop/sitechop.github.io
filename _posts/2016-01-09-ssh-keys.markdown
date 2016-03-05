@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  SSH Key Generation on Windows OSX and Ubuntu
-date:   2016-01-13 12:00:00 -0800
+date:   2016-01-09 12:00:00 -0800
 permalink: /:categories/ssh-key-generation-windows-osx-ubuntu
 categories: posts
 image: /images/posts/ssh-keys/featured.jpg
 thumb: /images/posts/ssh-keys/featured-thumb.jpg
 class: general
 excerpt: Learn how to generate SSH keys on Windows, OSX and Ubuntu.
-post_id: 4
 ---
 
 SSH Key Generation on Windows, OSX, and Ubuntu
@@ -48,23 +47,13 @@ The key's randomart image is:
 +-----------------+
 ```
     
-This will save your public and private key in home/.ssh . The folder is hidden. To view it on Ubuntu you can press CTRL+H to display hidden folders.
+This will save your public and private key in home/.ssh . The folder is hidden. To view it on Ubuntu you can press `CTRL+H` to display hidden folders.
 
 ![ubuntu-ssh-folder](/images/posts/ssh-keys/hidden-folder-ubuntu.png)
 
-In Mac OSX you can run the following command through terminal to display hidden folders.
+In Mac OSX you can open finder and press `command+g`, enter `~/.ssh` as the location. Here you will find your private and public keys.
 
-```nohighlight
-defaults write com.apple.Finder AppleShowAllFiles YES
-```
-
-You'll need to relaunch Finder for the change to take effect. Do that by ALT+Right-clicking the icon and going to relaunch.
-
-![relaunch-osx-finder](/images/posts/ssh-keys/relaunch-finder.png)
-
-When you re-open finder your hidden folders will be displayed. They're grayed out though, to open a hidden folder just Right-click>Open.
-
-![relaunch-osx-finder](/images/posts/ssh-keys/hidden-folder-mac.png)
+<img src="/images/posts/ssh-keys/osx-go-to-folder.png" alt="osx go to folder" width="390px">
 
 ### SSH Key generation on Windows with PuTTy
 
@@ -79,3 +68,5 @@ Since most servers are some form of linux, and use OpenSSH, we'll need the key p
 To connect to a server using this key pair you'll need to connect through PuTTy. Before connecting navigate to the SSH>Auth section and find your key.
 
 ![puttygen-ssh-key](/images/posts/ssh-keys/putty.png)
+
+**March 5, 2016:** Updated the OSX instructions.
