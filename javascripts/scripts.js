@@ -75,8 +75,6 @@ var ajaxChimp = {
 var sitechop = {
   init : function() {
     var mailingLists = document.querySelectorAll('.mailing-list')
-
-    general.loadCss('https://cloud.typography.com/7205494/6536952/css/fonts.css')
     
     for (var i=0; i<mailingLists.length;i++)
       ajaxChimp.init(mailingLists[i])
