@@ -56,7 +56,7 @@ adduser git
 
 Ubuntu will ask you for a password, enter a secure one. It will also ask you for a bunch of contact information, you can just leave that part blank. Now let's upload our public ssh key so we can connect.
 
-If you don't have a set of SSH keys on your system, you can follow my guide on generating them [here](/general/ssh-keys-windows-osx-ubuntu).
+If you don't have a set of SSH keys on your system, you can follow my guide on generating them [here](/posts/ssh-key-generation-windows-osx-ubuntu).
 
 ```nohighlight
 cd /home/git
