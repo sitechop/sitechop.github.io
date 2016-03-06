@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Social Media Icons using an SVG Sprite"
-date:   2014-12-21 12:00:00 -0800
+date:   2015-01-01 12:00:00 -0800
 permalink: /:categories/social-media-icons-svg-sprite
 categories: posts
 image: /images/posts/generic-front-end/featured.jpg

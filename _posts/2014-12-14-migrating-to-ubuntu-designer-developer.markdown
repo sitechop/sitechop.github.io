@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Migrating to Ubuntu as a Designer and Developer"
-date:   2015-01-20 12:00:00 -0800
+date:   2014-12-14 12:00:00 -0800
 permalink: /:categories/migrating-ubuntu-designer-developer
 categories: posts
 image: /images/posts/migrating-ubuntu/featured.jpg
