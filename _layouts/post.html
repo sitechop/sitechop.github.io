@@ -28,8 +28,8 @@ layout: post-single
     </div>
 
     <div class="side-column">
+
       <div class="sidebox">
-        
         <form class="mailing-list" action="http://sitechop.us12.list-manage.com/subscribe/post?u=f4a996f4fe29ebe8cb8c9dc24&amp;id=68f48d3755" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
           <h3>Join our mailing list</h3>
           <p>Get new tutorials and updates delivered right to your inbox.</p>
@@ -39,8 +39,43 @@ layout: post-single
           </fieldset>
           <p class="response"></p>
         </form>
-
       </div>
+
+      <div class="sidebox social">
+        <h3>Share this post</h3>
+        <p>If found this post helpful be sure to share it with your friends!</p>
+        <ul class="side-social">
+          <li>
+            <a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ "http://sitechop.com" | cgi_escape }}{{ page.url | cgi_escape }}">Share this post</a>
+          </li>
+          <li>
+            <a target="_blank" class="twitter" href="http://twitter.com/home?status={{ page.excerpt | cgi_escape }}%0A{{ "http://sitechop.com" | cgi_escape }}{{ page.url | cgi_escape }}">Tweet this post</a>
+          </li>
+          <li>
+            <a target="_blank" class="google" href="https://plus.google.com/share?url={{ "http://sitechop.com" | cgi_escape }}{{ page.url | cgi_escape }}">Share on Google Plus</a>
+          </li>
+        </ul>
+      </div>
+
+      {% if page.github or page.codepen %}
+      <div class="sidebox">
+        <h3>Demos &amp; Resources</h3>
+        <ul>
+          {% if page.github %}
+            <li><a class="github-icon" href="https://github.com/sitechop">GitHub Source</a></li>
+          {% endif %}
+          {% if page.codepen %}
+            <li><a class="codepen-icon" href="http://codepen.io/sitechop/">Codepen demo</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
+
+
+
+        </ul>
+      </div>
+
     </div>
 
   </div>
