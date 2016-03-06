@@ -146,7 +146,7 @@ sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
 
 This is a great tool for managing MySQL databases. You can install it by running the code below.
 
-```
+```nohighlight
 sudo apt-get install phpmyadmin
 sudo php5enmod mcrypt
 ```
