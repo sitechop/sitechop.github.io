@@ -70,4 +70,4 @@ To connect to a server using this key pair you'll need to connect through PuTTy.
 
 ![puttygen-ssh-key](/images/posts/ssh-keys/putty.png)
 
-**March 5, 2016:** Updated the OSX instructions.
+- **March 5, 2016:** Updated the OSX instructions.

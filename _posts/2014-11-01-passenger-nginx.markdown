@@ -180,6 +180,5 @@ Great! At this point we pretty much have a Rails production sever set up! The on
 
 ### Updates
 
-**12-18-14** - Tutorial has been updated for the latest version of Phusion Passenger (4.0.55)
-
-**2-24-16** - Tutorial has been updated to use a startup script from Linode
+- **12-18-14** - Tutorial has been updated for the latest version of Phusion Passenger (4.0.55)
+- **2-24-16** - Tutorial has been updated to use a startup script from Linode
