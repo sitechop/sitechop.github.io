@@ -1,0 +1,22 @@
+{
+  "posts" : [
+    {
+      "title" : "Installing Ruby on Rails and MySQL on Ubuntu",
+      "date" : "September 30, 2014",
+      "excerpt" : "Learn how to get Ruby on Rails and MySql installed and running on an Ubuntu machine.",
+      "category" : "ubuntu"
+    },
+    {
+      "title" : "Installing Git From Source",
+      "date" : "October 1, 2014",
+      "excerpt" : "Learn how to install the latest version of git from source on Ubuntu 14.04.",
+      "category" : "ubuntu"
+    },
+    {
+      "title" : "SSH Key Generation on Windows OSX and Ubuntu",
+      "date" : "October 7, 2014",
+      "excerpt" : "Learn how to generate SSH keys on Windows, OSX and Ubuntu.",
+      "category" : "general"
+    }
+  ]
+}
