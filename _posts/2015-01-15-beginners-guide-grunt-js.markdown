@@ -2,7 +2,7 @@
 layout: post
 title:  "Beginners Guide to Grunt JS"
 date:   2015-01-15 12:00:00 -0800
-permalink: /:categories/social-media-icons-svg-sprite
+permalink: /:categories/beginners-guide-grunt-js
 categories: posts
 image: /images/posts/gruntjs-basics/featured.jpg
 thumb:  /images/posts/gruntjs-basics/featured-thumb.jpg

@@ -62,9 +62,9 @@
   }
 }
 
-/* -----------------------*/
+////////////////////////////
 // Variables
-/* -----------------------*/
+////////////////////////////
 
 $headingtext: #364044;
 $text: #555D61;
@@ -79,9 +79,9 @@ $ubuntu: #F38835;
 $windows: #5D45A7;
 $general: #BB4982;
 
-/* -----------------------*/
+////////////////////////////
 // Reset / Defaults
-/* -----------------------*/
+////////////////////////////
 
 * {
   margin: 0;
@@ -115,9 +115,9 @@ fieldset {
   border: none;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Helpful Classes
-/* -----------------------*/
+////////////////////////////
 
 .main {
   background: #f6f6f6;
@@ -146,9 +146,9 @@ fieldset {
   }
 }
 
-/* -----------------------*/
+////////////////////////////
 // Header
-/* -----------------------*/
+////////////////////////////
 
 .header {
   background: white;
@@ -193,9 +193,9 @@ h1 {
   }
 }
 
-/* -----------------------*/
+////////////////////////////
 // Hero
-/* -----------------------*/
+////////////////////////////
 .hero {
   background-size: cover;
   background-position: center center;
@@ -233,9 +233,9 @@ h1 {
   height: 17em;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Post Index
-/* -----------------------*/
+////////////////////////////
 .index-wrapper {
   padding-top: 40px;
 }
@@ -336,9 +336,9 @@ h1 {
   padding: 1.75em 1.25em;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Post Single
-/* -----------------------*/
+////////////////////////////
 .post-show {
   .width-wrapper {
     background: #fff;
@@ -419,9 +419,9 @@ h1 {
   }
 }
 
-/* -----------------------*/
+////////////////////////////
 // Mailing List
-/* -----------------------*/
+////////////////////////////
 .mailing-list {
   fieldset {
     position: relative;
@@ -539,9 +539,9 @@ h1 {
   }
 }
 
-/* -----------------------*/
+////////////////////////////
 // Pagination
-/* -----------------------*/
+////////////////////////////
 .pagination {
   @extend %clear;
   margin-bottom: 40px;
@@ -567,9 +567,9 @@ h1 {
   float: left;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Footer
-/* -----------------------*/
+////////////////////////////
 .footer {
   background: #fff;
   box-shadow: 0px 14px 124px 0px rgba(0,0,0,0);
@@ -649,16 +649,16 @@ h1 {
   margin-top: 40px;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Comments
-/* -----------------------*/
+////////////////////////////
 .comments {
   margin-top: 2.5em;
 }
 
-/* -----------------------*/
+////////////////////////////
 // Icons
-/* -----------------------*/
+////////////////////////////
 %logo-icon {
   background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMjZBNUU4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NSA0NC45Ij48cGF0aCBkPSJNMjUuMywxNy41Yy0wLjMsMC4zLTAuMywwLjYsMC40LDEuM2MwLjgsMC44LDMuNCwxLjcsNC44LDMuMWMyLjksMi45LDEuNiw3LTAuOSw5LjVjLTUuMyw1LjItMTYuNCw1LjYtMjUuMiw0LjJjMC42LDAuOCwxLjQsMS43LDIuMiwyLjVjOC43LDksMjMsOSwzMS44LDAuMmM1LjUtNS41LDcuNS0xMyw2LjItMjAuMWMtMS40LTAuMS0zLjYtMC43LTYuNS0xLjRDMzYuOSwxNi42LDI3LjMsMTUuNSwyNS4zLDE3LjV6Ii8+PHBhdGggZD0iTTIyLjgsMjcuMWMwLjYtMC42LDAuMi0xLjktMC4zLTIuNGMtMC44LTAuOC01LjYtMy4yLTcuNS01LjFjLTEuMi0xLjEtMC40LTQuMiwwLjEtNC44YzAuMy0wLjQsMC44LTEuMSwxLjQtMS42YzUuMS01LDE2LTUsMjQuMy00Yy0wLjYtMC45LTEuNC0xLjktMi4zLTIuN2MtOC45LTguNy0yMy4yLTguNi0zMiwwLjFDMS4xLDEyLTEsMTkuOCwwLjUsMjYuOGMwLjcsMC4xLDIsMC41LDQuMiwwLjlDOC43LDI4LjYsMjAuNCwyOS41LDIyLjgsMjcuMXoiLz48L3N2Zz4=);
 }
@@ -714,24 +714,24 @@ h1 {
 
 
 @media (min-width: 38em){
-  /* -----------------------*/
+  ////////////////////////////
   // Header
-  /* -----------------------*/
+  ////////////////////////////
   .header {
     padding: 1.5em 0;
   }
 
-  /* -----------------------*/
+  ////////////////////////////
   // Post Single
-  /* -----------------------*/
+  ////////////////////////////
   .post-header {
     padding-left: 20px;
     border-left: 5px solid $blue;
   }
 
-  /* -----------------------*/
+  ////////////////////////////
   // Footer
-  /* -----------------------*/
+  ////////////////////////////
   .footer-box {
     display: inline-block;
     vertical-align: top;
@@ -745,9 +745,9 @@ h1 {
 
 
 @media (min-width: 42em){
-  /* -----------------------*/
+  ////////////////////////////
   // Post Index
-  /* -----------------------*/  
+  ////////////////////////////  
   .index-wrapper {
     display: -webkit-box;
     display: -moz-box;
@@ -779,9 +779,9 @@ h1 {
 }
 
 @media (min-width: 55em){
-  /* -----------------------*/
+  ////////////////////////////
   // Post Single
-  /* -----------------------*/
+  ////////////////////////////
   .post-show .width-wrapper {
     padding: 40px;
   }
@@ -800,9 +800,9 @@ h1 {
     width: 37%;
     margin-top: 0;
   }
-  /* -----------------------*/
+  ////////////////////////////
   // Mailing List
-  /* -----------------------*/
+  ////////////////////////////
   .side-column .mailing-list {
     display: block;
     text-align: left;
@@ -810,9 +810,9 @@ h1 {
 }
 
 @media (min-width: 65em){
-  /* -----------------------*/
+  ////////////////////////////
   // Post Single
-  /* -----------------------*/
+  ////////////////////////////
   .post-column {
     width: 67%;
     padding-right: 60px;
@@ -823,9 +823,9 @@ h1 {
 }
 
 @media (min-width: 70em){
-  /* -----------------------*/
+  ////////////////////////////
   // Hero
-  /* -----------------------*/
+  ////////////////////////////
   .hero {
     h2 {
       font-size: 2em;
@@ -838,9 +838,9 @@ h1 {
     }
   }
 
-  /* -----------------------*/
+  ////////////////////////////
   // Post Index
-  /* -----------------------*/  
+  ////////////////////////////  
   .post-card {
     -webkit-box-flex: 1 0 33.333333%;
     -moz-box-flex: 1 0 33.333333%;
@@ -872,9 +872,9 @@ h1 {
     padding-left: 1.125em;
   }
 
-  /* -----------------------*/
+  ////////////////////////////
   // Post Single
-  /* -----------------------*/
+  ////////////////////////////
   .post-column {
     width: 70%;
   }
@@ -884,9 +884,9 @@ h1 {
 }
 
 @media (min-width: 80em){
-  /* -----------------------*/
+  ////////////////////////////
   // Post Single
-  /* -----------------------*/
+  ////////////////////////////
   .main.post-show {
     padding: 40px;
   }
