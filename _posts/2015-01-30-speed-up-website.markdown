@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Speeding Up Your Website 101"
-date:   2015-01-15 12:00:00 -0800
+date:   2015-01-30 12:00:00 -0800
 permalink: /:categories/speed-up-your-website-101
 categories: posts
 image: /images/posts/speed-website/featured.jpg
 thumb:  /images/posts/speed-website/featured-thumb.jpg
-class: front-end
+class: general
 excerpt: Learn about Grunt JS and create your very first grunt file.
 ---
 
