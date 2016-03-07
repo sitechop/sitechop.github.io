@@ -19,7 +19,7 @@ github_username:  robbyklein
 author: Robert Klein
 # Build settings
 markdown: kramdown
-paginate: 6
+paginate: 12
 paginate_path: "/page-:num/"
 gems: [jekyll-paginate]
 
