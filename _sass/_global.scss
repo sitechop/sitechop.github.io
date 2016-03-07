@@ -327,6 +327,10 @@ h1 {
     background-size: 70px;
     @extend %ubuntu-icon;
   }
+  &.windows:after {
+    background-size: 60px;
+    @extend %windows-icon;
+  }
 }
 
 .post-card-body {
@@ -709,6 +713,10 @@ h1 {
 
 %google-white-icon {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAuOSAxOS42IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMC45IDE5LjYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik05LjgsMTkuNkM0LjQsMTkuNiwwLDE1LjIsMCw5LjhTNC40LDAsOS44LDBjMi43LDAsNC45LDEsNi42LDIuNmwtMi43LDIuNmMtMC43LTAuNy0yLTEuNS0zLjktMS41Yy0zLjMsMC02LjEsMi44LTYuMSw2LjJTNi41LDE2LDkuOCwxNmMzLjksMCw1LjMtMi44LDUuNi00LjJIOS44VjguNGg5LjNjMC4xLDAuNSwwLjIsMSwwLjIsMS42QzE5LjMsMTUuNywxNS41LDE5LjYsOS44LDE5LjZ6IE0zMC45LDExLjJoLTIuOFYxNGgtMi44di0yLjhoLTIuOFY4LjRoMi44VjUuNmgyLjh2Mi44aDIuOFYxMS4yeiIvPjwvZz48L3N2Zz4=);  
+}
+
+%windows-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4Ny4zIDg3LjYiPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDEyLjRsMzUuNy00LjlsMCwzNC40TDAsNDIuMkwwLDEyLjR6IE0zNS43LDQ1LjlsMCwzNC41TDAsNzUuNWwwLTI5LjhMMzUuNyw0NS45eiBNNDAsNi45TDg3LjMsMHY0MS41TDQwLDQxLjlMNDAsNi45eiBNODcuMyw0Ni4zbDAsNDEuM0w0MCw4MC45bC0wLjEtMzQuN0w4Ny4zLDQ2LjN6Ii8+PC9zdmc+);
 }
 
 
