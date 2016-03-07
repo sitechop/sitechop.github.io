@@ -7,7 +7,7 @@ categories: posts
 image: /images/posts/speed-website/featured.jpg
 thumb:  /images/posts/speed-website/featured-thumb.jpg
 class: general
-excerpt: Learn about Grunt JS and create your very first grunt file.
+excerpt: Tips and tricks to get your webpages load speed on track.
 ---
 
 It seems like only a select few, besides big companies and corporations, care about web page speed and performance. Browsing the web, it's common to see load times of 5 seconds and pages that weigh 4, 5, sometimes 10 megabytes! Even if that's not you, is your website optimized to its full potential? This post is not about stripping your page, its about optimizing everything so that your website loads as fast as possible.
